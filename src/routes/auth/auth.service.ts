@@ -60,7 +60,7 @@ export class AuthService {
             return {
                 success: true,
                 status: 201,
-                message: "Registration successful, otp sent to your email, Maximum 1 day to reset password",
+                message: "Registration successful, otp sent to your email",
             };
         } catch (error: any) {
             if (error.code === "P2002") {
@@ -162,7 +162,7 @@ export class AuthService {
                 success: true,
                 data: { otp },
                 status: 200,
-                message: "OTP sent to your email, please check your email. Maximum 1 day to reset password",
+                message: "OTP sent to your email, please check your email.",
             };
         } catch (error: any) {
             const status = error instanceof AppError ? error.status : 500;

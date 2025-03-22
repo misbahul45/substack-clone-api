@@ -450,3 +450,4 @@ Unique constraint failed on the constraint: `users_email_key`
 2025-03-21T15:27:13.103Z [ERROR]: [POST] /api/auth/signup - User already exists
 2025-03-21T15:27:13.105Z [INFO]: ::1 - - [21/Mar/2025:15:27:13 +0000] "POST /api/auth/signup HTTP/1.1" 404 62 "-" "Apidog/1.0.0 (https://apidog.com)"
 2025-03-21T15:27:27.358Z [INFO]: ::1 - - [21/Mar/2025:15:27:27 +0000] "POST /api/auth/signup HTTP/1.1" 201 122 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-22T14:47:33.092Z [INFO]: ::1 - - [22/Mar/2025:14:47:33 +0000] "POST /api/auth/signup HTTP/1.1" 201 122 "-" "Apidog/1.0.0 (https://apidog.com)"

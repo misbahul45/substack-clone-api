@@ -96,10 +96,7 @@ Endpoint ini digunakan untuk mendaftarkan pengguna baru. Data yang diterima akan
 {
   "success": true,
   "status": 201,
-  "message": "Registration successful, otp sent to your email, Maximum 1 day to reset password",
-  "data": {
-    "otp": 1234
-  }
+  "message": "Registration successful, otp sent to your email",
 }
 ```
 
