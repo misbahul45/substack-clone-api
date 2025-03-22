@@ -1,0 +1,452 @@
+2025-03-09T19:53:07.671Z [INFO]: ::1 - - [09/Mar/2025:19:53:07 +0000] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
+2025-03-09T19:53:11.539Z [INFO]: ::1 - - [09/Mar/2025:19:53:11 +0000] "GET /api/me HTTP/1.1" 200 4 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
+2025-03-09T19:53:11.928Z [INFO]: ::1 - - [09/Mar/2025:19:53:11 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:8000/api/me" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
+2025-03-09T20:00:33.314Z [INFO]: ::1 - - [09/Mar/2025:20:00:33 +0000] "GET /api/me HTTP/1.1" 404 145 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
+2025-03-09T20:00:54.861Z [INFO]: ::1 - - [09/Mar/2025:20:00:54 +0000] "POST /api/login HTTP/1.1" 200 14 "-" "EchoapiRuntime/1.1.0"
+2025-03-09T20:05:35.042Z [INFO]: ::1 - - [09/Mar/2025:20:05:35 +0000] "POST /api/login HTTP/1.1" 200 14 "-" "EchoapiRuntime/1.1.0"
+2025-03-10T02:56:02.319Z [INFO]: ::1 - - [10/Mar/2025:02:56:02 +0000] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
+2025-03-10T06:47:21.371Z [INFO]: ::ffff:127.0.0.1 - - [10/Mar/2025:06:47:21 +0000] "POST /api/auth/signin HTTP/1.1" 404 - "-" "insomnia/10.3.1"
+2025-03-10T06:47:28.610Z [INFO]: ::ffff:127.0.0.1 - - [10/Mar/2025:06:47:28 +0000] "POST /api/auth/signin HTTP/1.1" 404 - "-" "insomnia/10.3.1"
+2025-03-10T09:17:06.323Z [INFO]: ::1 - - [10/Mar/2025:09:17:06 +0000] "POST /signup HTTP/1.1" 404 146 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:17:21.170Z [INFO]: ::1 - - [10/Mar/2025:09:17:21 +0000] "POST /signup HTTP/1.1" 404 146 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:17:49.320Z [INFO]: ::1 - - [10/Mar/2025:09:17:49 +0000] "POST /api/auth/signup HTTP/1.1" 400 3033 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:18:39.992Z [INFO]: ::1 - - [10/Mar/2025:09:18:39 +0000] "POST /api/auth/signup HTTP/1.1" 400 3033 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:19:39.754Z [INFO]: ::1 - - [10/Mar/2025:09:19:39 +0000] "POST /api/auth/signup HTTP/1.1" 400 3033 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:22:34.848Z [INFO]: ::1 - - [10/Mar/2025:09:22:34 +0000] "POST /api/auth/signup HTTP/1.1" 400 3033 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:26:01.280Z [INFO]: ::1 - - [10/Mar/2025:09:26:01 +0000] "POST /api/auth/signup HTTP/1.1" 400 1573 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:27:12.944Z [INFO]: ::1 - - [10/Mar/2025:09:27:12 +0000] "POST /api/auth/signup HTTP/1.1" 400 1573 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:27:47.982Z [INFO]: ::1 - - [10/Mar/2025:09:27:47 +0000] "POST /api/auth/signup HTTP/1.1" 400 1573 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:27:51.849Z [INFO]: ::1 - - [10/Mar/2025:09:27:51 +0000] "POST /api/auth/signup HTTP/1.1" 400 1573 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:29:05.990Z [INFO]: ::1 - - [10/Mar/2025:09:29:05 +0000] "POST /api/auth/signup HTTP/1.1" 400 1237 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:29:17.473Z [INFO]: ::1 - - [10/Mar/2025:09:29:17 +0000] "POST /api/auth/signup HTTP/1.1" 400 1233 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:29:48.058Z [INFO]: ::1 - - [10/Mar/2025:09:29:48 +0000] "POST /api/auth/signup HTTP/1.1" 400 1233 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:31:20.636Z [ERROR]: [POST] /api/auth/signup - Expected double-quoted property name in JSON at position 27 (line 3 column 1)
+2025-03-10T09:31:20.647Z [INFO]: ::1 - - [10/Mar/2025:09:31:20 +0000] "POST /api/auth/signup HTTP/1.1" 500 120 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:31:35.993Z [INFO]: ::1 - - [10/Mar/2025:09:31:35 +0000] "POST /api/auth/signup HTTP/1.1" 400 1573 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:31:55.622Z [INFO]: ::1 - - [10/Mar/2025:09:31:55 +0000] "POST /api/auth/signup HTTP/1.1" 400 1573 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:32:23.176Z [ERROR]: [POST] /api/auth/signup - Validation failed
+2025-03-10T09:32:23.187Z [INFO]: ::1 - - [10/Mar/2025:09:32:23 +0000] "POST /api/auth/signup HTTP/1.1" 400 60 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:33:06.101Z [ERROR]: [POST] /api/auth/signup - Validation failed
+2025-03-10T09:33:06.105Z [INFO]: ::1 - - [10/Mar/2025:09:33:06 +0000] "POST /api/auth/signup HTTP/1.1" 400 60 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:33:15.392Z [ERROR]: [POST] /api/auth/signup - Validation failed
+2025-03-10T09:33:15.396Z [INFO]: ::1 - - [10/Mar/2025:09:33:15 +0000] "POST /api/auth/signup HTTP/1.1" 400 60 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:35:08.690Z [INFO]: ::1 - - [10/Mar/2025:09:35:08 +0000] "POST /api/auth/signup HTTP/1.1" 400 1573 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:35:32.347Z [INFO]: ::1 - - [10/Mar/2025:09:35:32 +0000] "POST /api/auth/signup HTTP/1.1" 400 1573 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:37:55.735Z [ERROR]: [POST] /api/auth/signup - Validation failed
+2025-03-10T09:37:55.745Z [INFO]: ::1 - - [10/Mar/2025:09:37:55 +0000] "POST /api/auth/signup HTTP/1.1" 400 60 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:40:13.040Z [ERROR]: [POST] /api/auth/signup - Validation failed
+2025-03-10T09:40:13.045Z [INFO]: ::1 - - [10/Mar/2025:09:40:13 +0000] "POST /api/auth/signup HTTP/1.1" 400 60 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:40:42.331Z [ERROR]: [POST] /api/auth/signup - Validation failed
+2025-03-10T09:40:42.348Z [INFO]: ::1 - - [10/Mar/2025:09:40:42 +0000] "POST /api/auth/signup HTTP/1.1" 400 60 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:40:53.995Z [INFO]: ::1 - - [10/Mar/2025:09:40:53 +0000] "POST /api/auth/signup HTTP/1.1" 201 51 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:42:49.315Z [INFO]: ::1 - - [10/Mar/2025:09:42:49 +0000] "POST /api/auth/signup HTTP/1.1" 201 144 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:45:45.937Z [INFO]: ::1 - - [10/Mar/2025:09:45:45 +0000] "POST /auth/signup HTTP/1.1" 404 151 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:45:55.285Z [INFO]: ::1 - - [10/Mar/2025:09:45:55 +0000] "POST /auth/signup HTTP/1.1" 404 151 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:46:12.368Z [INFO]: ::1 - - [10/Mar/2025:09:46:12 +0000] "POST /auth/signup HTTP/1.1" 404 151 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:46:25.472Z [INFO]: ::1 - - [10/Mar/2025:09:46:25 +0000] "POST /auth/signup HTTP/1.1" 404 151 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:46:44.345Z [INFO]: ::1 - - [10/Mar/2025:09:46:44 +0000] "POST /auth/signup HTTP/1.1" 404 151 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:47:01.286Z [INFO]: ::1 - - [10/Mar/2025:09:47:01 +0000] "POST /auth/signup HTTP/1.1" 404 151 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:47:36.172Z [INFO]: ::1 - - [10/Mar/2025:09:47:36 +0000] "POST /auth/signup HTTP/1.1" 404 151 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:47:42.635Z [INFO]: ::1 - - [10/Mar/2025:09:47:42 +0000] "POST /api/auth/signup HTTP/1.1" 201 144 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:55:29.006Z [ERROR]: [POST] /api/auth/signup - 
+Invalid `prisma.user.create()` invocation in
+C:\Users\misba\OneDrive\Desktop\code\be\substack-clone-api\src\routes\auth\auth.controller.ts:26:31
+
+  23 
+  24 data.password=await argon.hash(data.password);
+  25 
+→ 26 await prisma.user.create(
+Can't reach database server at `ep-odd-union-a4aq59u0-pooler.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-odd-union-a4aq59u0-pooler.us-east-1.aws.neon.tech:5432`.
+2025-03-10T09:55:29.020Z [INFO]: ::1 - - [10/Mar/2025:09:55:29 +0000] "POST /api/auth/signup HTTP/1.1" 500 512 "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:55:40.544Z [INFO]: ::1 - - [10/Mar/2025:09:55:40 +0000] "POST /api/auth/signup HTTP/1.1" - - "-" "PostmanRuntime/7.43.0"
+2025-03-10T09:55:41.460Z [ERROR]: [POST] /api/auth/signup - 
+Invalid `prisma.user.create()` invocation in
+C:\Users\misba\OneDrive\Desktop\code\be\substack-clone-api\src\routes\auth\auth.controller.ts:26:31
+
+  23 
+  24 data.password=await argon.hash(data.password);
+  25 
+→ 26 await prisma.user.create(
+Can't reach database server at `ep-odd-union-a4aq59u0-pooler.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-odd-union-a4aq59u0-pooler.us-east-1.aws.neon.tech:5432`.
+2025-03-11T01:02:40.516Z [ERROR]: [POST] /api/auth/signup - 
+Invalid `prisma.user.create()` invocation in
+C:\Users\misba\OneDrive\Desktop\code\be\substack-clone-api\src\routes\auth\auth.controller.ts:26:31
+
+  23 
+  24 data.password=await argon.hash(data.password);
+  25 
+→ 26 await prisma.user.create(
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`.
+2025-03-11T01:02:40.535Z [INFO]: ::1 - - [11/Mar/2025:01:02:40 +0000] "POST /api/auth/signup HTTP/1.1" 500 426 "-" "PostmanRuntime/7.43.0"
+2025-03-11T01:07:51.288Z [INFO]: ::1 - - [11/Mar/2025:01:07:51 +0000] "POST /api/auth/signup HTTP/1.1" 201 144 "-" "PostmanRuntime/7.43.0"
+2025-03-11T01:07:56.937Z [ERROR]: [POST] /api/auth/signup - 
+Invalid `prisma.user.create()` invocation in
+C:\Users\misba\OneDrive\Desktop\code\be\substack-clone-api\src\routes\auth\auth.service.ts:26:31
+
+  23 
+  24 data.password=await argon.hash(data.password);
+  25 
+→ 26 await prisma.user.create(
+Unique constraint failed on the constraint: `users_email_key`
+2025-03-11T01:07:56.939Z [INFO]: ::1 - - [11/Mar/2025:01:07:56 +0000] "POST /api/auth/signup HTTP/1.1" 500 364 "-" "PostmanRuntime/7.43.0"
+2025-03-11T01:12:33.202Z [ERROR]: [POST] /api/auth/signup - User already exists
+2025-03-11T01:12:33.215Z [INFO]: ::1 - - [11/Mar/2025:01:12:33 +0000] "POST /api/auth/signup HTTP/1.1" 400 122 "-" "PostmanRuntime/7.43.0"
+2025-03-11T01:13:22.544Z [ERROR]: [POST] /api/auth/signup - Validation failed
+2025-03-11T01:13:22.554Z [INFO]: ::1 - - [11/Mar/2025:01:13:22 +0000] "POST /api/auth/signup HTTP/1.1" 400 60 "-" "PostmanRuntime/7.43.0"
+2025-03-11T02:36:46.737Z [ERROR]: [POST] /api/auth/signup - Validation failed
+2025-03-11T02:36:46.744Z [INFO]: ::1 - - [11/Mar/2025:02:36:46 +0000] "POST /api/auth/signup HTTP/1.1" 400 60 "-" "PostmanRuntime/7.43.0"
+2025-03-11T02:37:01.813Z [ERROR]: [POST] /api/auth/signup - 
+Invalid `prisma.user.create()` invocation in
+C:\Users\misba\OneDrive\Desktop\code\be\substack-clone-api\src\routes\auth\auth.service.ts:29:44
+
+  26 
+  27 const hashedPassword = await argon.hash(data.password);
+  28 
+→ 29 const user = await prisma.user.create(
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`.
+2025-03-11T02:37:01.815Z [INFO]: ::1 - - [11/Mar/2025:02:37:01 +0000] "POST /api/auth/signup HTTP/1.1" 500 445 "-" "PostmanRuntime/7.43.0"
+2025-03-11T02:37:36.387Z [ERROR]: [POST] /api/auth/signup - User already exists
+2025-03-11T02:37:36.388Z [INFO]: ::1 - - [11/Mar/2025:02:37:36 +0000] "POST /api/auth/signup HTTP/1.1" 400 131 "-" "PostmanRuntime/7.43.0"
+2025-03-11T02:38:02.357Z [ERROR]: [POST] /api/auth/signin - Missing credentials
+2025-03-11T02:38:02.358Z [INFO]: ::1 - - [11/Mar/2025:02:38:02 +0000] "POST /api/auth/signin HTTP/1.1" 401 62 "-" "PostmanRuntime/7.43.0"
+2025-03-11T02:38:23.410Z [ERROR]: [POST] /api/auth/signin - User not found
+2025-03-11T02:38:23.412Z [INFO]: ::1 - - [11/Mar/2025:02:38:23 +0000] "POST /api/auth/signin HTTP/1.1" 401 57 "-" "PostmanRuntime/7.43.0"
+2025-03-11T02:38:34.324Z [INFO]: ::1 - - [11/Mar/2025:02:38:34 +0000] "POST /api/auth/signin HTTP/1.1" 200 429 "-" "PostmanRuntime/7.43.0"
+2025-03-11T02:39:20.581Z [INFO]: ::1 - - [11/Mar/2025:02:39:20 +0000] "GET /api/auth/profile HTTP/1.1" 401 42 "-" "PostmanRuntime/7.43.0"
+2025-03-11T02:40:24.201Z [INFO]: ::1 - - [11/Mar/2025:02:40:24 +0000] "POST /api/auth/signin HTTP/1.1" 200 429 "-" "PostmanRuntime/7.43.0"
+2025-03-11T02:40:47.030Z [INFO]: ::1 - - [11/Mar/2025:02:40:47 +0000] "GET /api/auth/profile HTTP/1.1" 401 42 "-" "PostmanRuntime/7.43.0"
+2025-03-11T02:41:00.933Z [INFO]: ::1 - - [11/Mar/2025:02:41:00 +0000] "GET /api/auth/profile HTTP/1.1" 200 357 "-" "PostmanRuntime/7.43.0"
+2025-03-11T02:41:53.785Z [INFO]: ::1 - - [11/Mar/2025:02:41:53 +0000] "GET /api/auth/profile HTTP/1.1" 200 420 "-" "PostmanRuntime/7.43.0"
+2025-03-11T02:48:41.248Z [ERROR]: [POST] /api/auth/signin - Expected double-quoted property name in JSON at position 51 (line 4 column 1)
+2025-03-11T02:48:41.257Z [INFO]: ::1 - - [11/Mar/2025:02:48:41 +0000] "POST /api/auth/signin HTTP/1.1" 500 120 "-" "PostmanRuntime/7.43.0"
+2025-03-11T02:48:46.192Z [ERROR]: [POST] /api/auth/signin - Missing credentials
+2025-03-11T02:48:46.195Z [INFO]: ::1 - - [11/Mar/2025:02:48:46 +0000] "POST /api/auth/signin HTTP/1.1" 401 62 "-" "PostmanRuntime/7.43.0"
+2025-03-11T02:48:55.127Z [ERROR]: [POST] /api/auth/signin - Missing credentials
+2025-03-11T02:48:55.129Z [INFO]: ::1 - - [11/Mar/2025:02:48:55 +0000] "POST /api/auth/signin HTTP/1.1" 401 62 "-" "PostmanRuntime/7.43.0"
+2025-03-11T02:49:08.854Z [ERROR]: [POST] /api/auth/signin - Missing credentials
+2025-03-11T02:49:08.855Z [INFO]: ::1 - - [11/Mar/2025:02:49:08 +0000] "POST /api/auth/signin HTTP/1.1" 401 62 "-" "PostmanRuntime/7.43.0"
+2025-03-11T02:49:15.011Z [ERROR]: [POST] /api/auth/signin - String must contain at least 8 character(s)
+2025-03-11T02:49:15.013Z [INFO]: ::1 - - [11/Mar/2025:02:49:15 +0000] "POST /api/auth/signin HTTP/1.1" 401 86 "-" "PostmanRuntime/7.43.0"
+2025-03-11T02:49:20.204Z [ERROR]: [POST] /api/auth/signin - String must contain at least 8 character(s)
+2025-03-11T02:49:20.206Z [INFO]: ::1 - - [11/Mar/2025:02:49:20 +0000] "POST /api/auth/signin HTTP/1.1" 401 86 "-" "PostmanRuntime/7.43.0"
+2025-03-11T02:49:42.137Z [ERROR]: [POST] /api/auth/signin - Missing credentials
+2025-03-11T02:49:42.145Z [INFO]: ::1 - - [11/Mar/2025:02:49:42 +0000] "POST /api/auth/signin HTTP/1.1" 401 62 "-" "PostmanRuntime/7.43.0"
+2025-03-11T02:49:46.992Z [ERROR]: [POST] /api/auth/signin - Validation failed
+2025-03-11T02:49:46.993Z [INFO]: ::1 - - [11/Mar/2025:02:49:46 +0000] "POST /api/auth/signin HTTP/1.1" 401 60 "-" "PostmanRuntime/7.43.0"
+2025-03-11T02:49:53.173Z [ERROR]: [POST] /api/auth/signin - Incorrect password
+2025-03-11T02:49:53.175Z [INFO]: ::1 - - [11/Mar/2025:02:49:53 +0000] "POST /api/auth/signin HTTP/1.1" 401 61 "-" "PostmanRuntime/7.43.0"
+2025-03-11T02:50:02.772Z [INFO]: ::1 - - [11/Mar/2025:02:50:02 +0000] "POST /api/auth/signin HTTP/1.1" 200 429 "-" "PostmanRuntime/7.43.0"
+2025-03-11T02:50:19.104Z [INFO]: ::1 - - [11/Mar/2025:02:50:19 +0000] "GET /api/auth/profile HTTP/1.1" 200 420 "-" "PostmanRuntime/7.43.0"
+2025-03-11T02:50:23.109Z [INFO]: ::1 - - [11/Mar/2025:02:50:23 +0000] "GET /api/auth/profile HTTP/1.1" 200 420 "-" "PostmanRuntime/7.43.0"
+2025-03-11T02:50:42.526Z [INFO]: ::1 - - [11/Mar/2025:02:50:42 +0000] "POST /api/auth/signin HTTP/1.1" 200 429 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:02:10.511Z [ERROR]: [POST] /api/auth/signin - Cannot read properties of undefined (reading 'id')
+2025-03-11T03:02:10.524Z [INFO]: ::1 - - [11/Mar/2025:03:02:10 +0000] "POST /api/auth/signin HTTP/1.1" 500 93 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:02:16.364Z [ERROR]: [POST] /api/auth/signin - Cannot read properties of undefined (reading 'id')
+2025-03-11T03:02:16.372Z [INFO]: ::1 - - [11/Mar/2025:03:02:16 +0000] "POST /api/auth/signin HTTP/1.1" 500 93 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:08:16.376Z [ERROR]: [POST] /api/auth/signin - Cannot read properties of undefined (reading 'id')
+2025-03-11T03:08:16.387Z [INFO]: ::1 - - [11/Mar/2025:03:08:16 +0000] "POST /api/auth/signin HTTP/1.1" 500 93 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:08:20.056Z [ERROR]: [POST] /api/auth/signin - Cannot read properties of undefined (reading 'id')
+2025-03-11T03:08:20.061Z [INFO]: ::1 - - [11/Mar/2025:03:08:20 +0000] "POST /api/auth/signin HTTP/1.1" 500 93 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:08:25.941Z [ERROR]: [POST] /api/auth/signup - User already exists
+2025-03-11T03:08:25.943Z [INFO]: ::1 - - [11/Mar/2025:03:08:25 +0000] "POST /api/auth/signup HTTP/1.1" 400 131 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:08:31.215Z [INFO]: ::1 - - [11/Mar/2025:03:08:31 +0000] "GET /api/auth/profile HTTP/1.1" 401 42 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:08:36.258Z [ERROR]: [POST] /api/auth/signin - Cannot read properties of undefined (reading 'id')
+2025-03-11T03:08:36.263Z [INFO]: ::1 - - [11/Mar/2025:03:08:36 +0000] "POST /api/auth/signin HTTP/1.1" 500 93 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:09:44.136Z [ERROR]: [POST] /api/auth/signin - Cannot read properties of undefined (reading 'id')
+2025-03-11T03:09:44.140Z [INFO]: ::1 - - [11/Mar/2025:03:09:44 +0000] "POST /api/auth/signin HTTP/1.1" 500 93 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:09:49.547Z [ERROR]: [POST] /api/auth/signin - Cannot read properties of undefined (reading 'id')
+2025-03-11T03:09:49.553Z [INFO]: ::1 - - [11/Mar/2025:03:09:49 +0000] "POST /api/auth/signin HTTP/1.1" 500 93 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:10:27.406Z [ERROR]: [POST] /api/auth/signin - Cannot read properties of undefined (reading 'id')
+2025-03-11T03:10:27.416Z [INFO]: ::1 - - [11/Mar/2025:03:10:27 +0000] "POST /api/auth/signin HTTP/1.1" 500 93 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:12:03.945Z [ERROR]: [POST] /api/auth/signin - Validation failed
+2025-03-11T03:12:03.950Z [INFO]: ::1 - - [11/Mar/2025:03:12:03 +0000] "POST /api/auth/signin HTTP/1.1" 401 60 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:12:11.865Z [INFO]: ::1 - - [11/Mar/2025:03:12:11 +0000] "POST /api/auth/signin HTTP/1.1" 200 58 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:12:51.041Z [INFO]: ::1 - - [11/Mar/2025:03:12:51 +0000] "GET /api/refresh-token HTTP/1.1" 404 156 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:12:58.571Z [INFO]: ::1 - - [11/Mar/2025:03:12:58 +0000] "GET /api/api/auth/refresh-token HTTP/1.1" 404 165 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:13:30.751Z [INFO]: ::1 - - [11/Mar/2025:03:13:30 +0000] "GET /api/api/auth/refresh-token HTTP/1.1" 404 165 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:13:41.988Z [INFO]: ::1 - - [11/Mar/2025:03:13:41 +0000] "GET /api/auth//refresh-token HTTP/1.1" 404 162 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:13:46.436Z [INFO]: ::1 - - [11/Mar/2025:03:13:46 +0000] "GET /api/auth/refresh-token HTTP/1.1" 404 161 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:13:57.560Z [INFO]: ::1 - - [11/Mar/2025:03:13:57 +0000] "GET /api/auth/refresh-token HTTP/1.1" 404 161 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:14:35.959Z [INFO]: ::1 - - [11/Mar/2025:03:14:35 +0000] "GET /api/auth/logout HTTP/1.1" 404 154 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:14:49.688Z [INFO]: ::1 - - [11/Mar/2025:03:14:49 +0000] "GET /api/auth/profile HTTP/1.1" 200 420 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:15:10.609Z [INFO]: ::1 - - [11/Mar/2025:03:15:10 +0000] "POST /api/auth/refresh-token HTTP/1.1" 200 70 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:15:18.409Z [INFO]: ::1 - - [11/Mar/2025:03:15:18 +0000] "POST /api/auth/refresh-token HTTP/1.1" 200 70 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:15:20.588Z [INFO]: ::1 - - [11/Mar/2025:03:15:20 +0000] "POST /api/auth/refresh-token HTTP/1.1" 200 70 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:15:29.426Z [INFO]: ::1 - - [11/Mar/2025:03:15:29 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:15:31.552Z [INFO]: ::1 - - [11/Mar/2025:03:15:31 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:15:45.347Z [INFO]: ::1 - - [11/Mar/2025:03:15:45 +0000] "GET /api/auth/profile HTTP/1.1" 200 420 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:16:14.148Z [INFO]: ::1 - - [11/Mar/2025:03:16:14 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:17:04.995Z [INFO]: ::1 - - [11/Mar/2025:03:17:04 +0000] "GET /api/auth/logout HTTP/1.1" 404 154 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:17:12.922Z [INFO]: ::1 - - [11/Mar/2025:03:17:12 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:17:18.858Z [INFO]: ::1 - - [11/Mar/2025:03:17:18 +0000] "POST /api/auth/signin HTTP/1.1" 200 58 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:17:25.429Z [INFO]: ::1 - - [11/Mar/2025:03:17:25 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:17:29.829Z [INFO]: ::1 - - [11/Mar/2025:03:17:29 +0000] "GET /api/auth/profile HTTP/1.1" 401 42 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:17:57.024Z [INFO]: ::1 - - [11/Mar/2025:03:17:57 +0000] "POST /api/auth/signin HTTP/1.1" 200 58 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:18:52.826Z [INFO]: ::1 - - [11/Mar/2025:03:18:52 +0000] "GET /api/auth/signin HTTP/1.1" 404 154 "-" "PostmanRuntime/7.43.0"
+2025-03-11T03:18:59.755Z [INFO]: ::1 - - [11/Mar/2025:03:18:59 +0000] "GET /api/auth/profile HTTP/1.1" 200 420 "-" "PostmanRuntime/7.43.0"
+2025-03-13T14:17:23.305Z [INFO]: ::1 - - [13/Mar/2025:14:17:23 +0000] "GET /api/auth/profile HTTP/1.1" 401 42 "-" "PostmanRuntime/7.43.2"
+2025-03-13T14:17:48.414Z [ERROR]: [POST] /api/auth/signin - 
+Invalid `prisma.user.findFirst()` invocation in
+C:\Users\misba\OneDrive\Desktop\code\be\substack-clone-api\src\prismaService\user.prisma.ts:10:34
+
+   7     throw new Error("Either id or email must be provided.");
+   8 }
+   9 
+→ 10 return await prisma.user.findFirst(
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`.
+2025-03-13T14:17:48.426Z [INFO]: ::1 - - [13/Mar/2025:14:17:48 +0000] "POST /api/auth/signin HTTP/1.1" 500 453 "-" "PostmanRuntime/7.43.2"
+2025-03-13T14:19:24.524Z [INFO]: ::1 - - [13/Mar/2025:14:19:24 +0000] "POST /api/auth/signin HTTP/1.1" 200 58 "-" "PostmanRuntime/7.43.2"
+2025-03-13T14:19:31.386Z [INFO]: ::1 - - [13/Mar/2025:14:19:31 +0000] "POST /api/auth/refresh-token HTTP/1.1" 200 70 "-" "PostmanRuntime/7.43.2"
+2025-03-13T14:19:36.721Z [INFO]: ::1 - - [13/Mar/2025:14:19:36 +0000] "GET /api/auth/profile HTTP/1.1" 200 420 "-" "PostmanRuntime/7.43.2"
+2025-03-13T14:22:18.513Z [INFO]: ::1 - - [13/Mar/2025:14:22:18 +0000] "GET /api/auth/profile HTTP/1.1" 200 309 "-" "PostmanRuntime/7.43.2"
+2025-03-13T14:31:54.044Z [INFO]: ::1 - - [13/Mar/2025:14:31:54 +0000] "GET /api/auth/profile HTTP/1.1" 200 309 "-" "PostmanRuntime/7.43.2"
+2025-03-13T14:35:46.589Z [INFO]: ::1 - - [13/Mar/2025:14:35:46 +0000] "POST /api/auth/refresh- HTTP/1.1" 404 45 "-" "PostmanRuntime/7.43.2"
+2025-03-13T14:36:09.988Z [INFO]: ::1 - - [13/Mar/2025:14:36:09 +0000] "POST /api/auth/refresh-token HTTP/1.1" 200 70 "-" "PostmanRuntime/7.43.2"
+2025-03-13T14:38:08.039Z [ERROR]: [POST] /api/auth/reset-password - User not found
+2025-03-13T14:38:08.043Z [INFO]: ::1 - - [13/Mar/2025:14:38:08 +0000] "POST /api/auth/reset-password HTTP/1.1" 404 57 "-" "PostmanRuntime/7.43.2"
+2025-03-13T14:38:23.134Z [INFO]: ::1 - - [13/Mar/2025:14:38:23 +0000] "POST /api/auth/reset-password HTTP/1.1" 200 84 "-" "PostmanRuntime/7.43.2"
+2025-03-13T14:38:27.717Z [INFO]: ::1 - - [13/Mar/2025:14:38:27 +0000] "POST /api/auth/reset-password HTTP/1.1" 200 84 "-" "PostmanRuntime/7.43.2"
+2025-03-13T15:12:04.291Z [ERROR]: [POST] /api/auth/reset-password - Missing credentials for "PLAIN"
+2025-03-13T15:12:04.305Z [INFO]: ::1 - - [13/Mar/2025:15:12:04 +0000] "POST /api/auth/reset-password HTTP/1.1" 404 76 "-" "PostmanRuntime/7.43.2"
+2025-03-13T15:14:29.924Z [INFO]: ::1 - - [13/Mar/2025:15:14:29 +0000] "POST /api/auth/reset-password HTTP/1.1" 500 63 "-" "PostmanRuntime/7.43.2"
+2025-03-13T15:14:54.388Z [INFO]: ::1 - - [13/Mar/2025:15:14:54 +0000] "POST /api/auth/reset-password HTTP/1.1" 500 63 "-" "PostmanRuntime/7.43.2"
+2025-03-13T15:18:34.122Z [INFO]: ::1 - - [13/Mar/2025:15:18:34 +0000] "POST /api/auth/reset-password HTTP/1.1" 200 84 "-" "PostmanRuntime/7.43.2"
+2025-03-13T15:22:31.554Z [INFO]: ::1 - - [13/Mar/2025:15:22:31 +0000] "POST /api/auth/reset-password HTTP/1.1" 200 84 "-" "PostmanRuntime/7.43.2"
+2025-03-13T15:35:41.682Z [INFO]: ::1 - - [13/Mar/2025:15:35:41 +0000] "POST /api/auth/reset-password HTTP/1.1" 500 412 "-" "PostmanRuntime/7.43.2"
+2025-03-13T15:38:10.997Z [INFO]: ::1 - - [13/Mar/2025:15:38:10 +0000] "POST /api/auth/reset-password HTTP/1.1" 200 84 "-" "PostmanRuntime/7.43.2"
+2025-03-13T15:39:16.246Z [INFO]: ::1 - - [13/Mar/2025:15:39:16 +0000] "GET /api/auth/verify-otp HTTP/1.1" 404 58 "-" "PostmanRuntime/7.43.2"
+2025-03-13T15:39:44.314Z [INFO]: ::1 - - [13/Mar/2025:15:39:44 +0000] "GET /api/auth/verify-otp HTTP/1.1" 404 58 "-" "PostmanRuntime/7.43.2"
+2025-03-13T15:39:55.876Z [INFO]: ::1 - - [13/Mar/2025:15:39:55 +0000] "POST /api/auth/verify-otp HTTP/1.1" 400 60 "-" "PostmanRuntime/7.43.2"
+2025-03-13T15:40:05.916Z [INFO]: ::1 - - [13/Mar/2025:15:40:05 +0000] "POST /api/auth/verify-otp HTTP/1.1" 200 67 "-" "PostmanRuntime/7.43.2"
+2025-03-13T15:46:41.481Z [INFO]: ::1 - - [13/Mar/2025:15:46:41 +0000] "POST /api/auth/reset-password HTTP/1.1" 200 84 "-" "PostmanRuntime/7.43.2"
+2025-03-13T15:47:44.876Z [INFO]: ::1 - - [13/Mar/2025:15:47:44 +0000] "GET /api/auth/update-password HTTP/1.1" 404 58 "-" "PostmanRuntime/7.43.2"
+2025-03-13T15:48:14.084Z [ERROR]: [POST] /api/auth/update-password - Please verify your otp first
+2025-03-13T15:48:14.086Z [INFO]: ::1 - - [13/Mar/2025:15:48:14 +0000] "POST /api/auth/update-password HTTP/1.1" 404 71 "-" "PostmanRuntime/7.43.2"
+2025-03-13T15:48:19.041Z [ERROR]: [POST] /api/auth/update-password - Please verify your otp first
+2025-03-13T15:48:19.043Z [INFO]: ::1 - - [13/Mar/2025:15:48:19 +0000] "POST /api/auth/update-password HTTP/1.1" 404 71 "-" "PostmanRuntime/7.43.2"
+2025-03-13T15:48:23.328Z [ERROR]: [POST] /api/auth/verify-otp - OTP expired
+2025-03-13T15:48:23.331Z [INFO]: ::1 - - [13/Mar/2025:15:48:23 +0000] "POST /api/auth/verify-otp HTTP/1.1" 404 54 "-" "PostmanRuntime/7.43.2"
+2025-03-17T23:45:41.043Z [ERROR]: [POST] /api/auth/signup - PrismaClientInitializationError: 
+Invalid `prisma.user.create()` invocation in
+C:\Users\misba\OneDrive\Desktop\code\be\substack-clone-api\src\prismaService\user.prisma.ts:24:38
+
+  21 
+  22 static async create(user:{ name: string; email: string; password: string }) {
+  23     try {
+→ 24         return await prisma.user.create(
+Authentication failed against database server at `localhost`, the provided database credentials for `root` are not valid.
+
+Please make sure to provide valid database credentials for the database server at `localhost`.
+2025-03-17T23:45:41.059Z [INFO]: ::1 - - [17/Mar/2025:23:45:41 +0000] "POST /api/auth/signup HTTP/1.1" 404 610 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-17T23:46:43.616Z [ERROR]: [POST] /api/auth/signup - PrismaClientInitializationError: 
+Invalid `prisma.user.create()` invocation in
+C:\Users\misba\OneDrive\Desktop\code\be\substack-clone-api\src\prismaService\user.prisma.ts:24:38
+
+  21 
+  22 static async create(user:{ name: string; email: string; password: string }) {
+  23     try {
+→ 24         return await prisma.user.create(
+Authentication failed against database server at `localhost`, the provided database credentials for `root` are not valid.
+
+Please make sure to provide valid database credentials for the database server at `localhost`.
+2025-03-17T23:46:43.623Z [INFO]: ::1 - - [17/Mar/2025:23:46:43 +0000] "POST /api/auth/signup HTTP/1.1" 404 610 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-17T23:47:14.873Z [ERROR]: [POST] /api/auth/signup - PrismaClientInitializationError: 
+Invalid `prisma.user.create()` invocation in
+C:\Users\misba\OneDrive\Desktop\code\be\substack-clone-api\src\prismaService\user.prisma.ts:24:38
+
+  21 
+  22 static async create(user:{ name: string; email: string; password: string }) {
+  23     try {
+→ 24         return await prisma.user.create(
+Authentication failed against database server at `localhost`, the provided database credentials for `root` are not valid.
+
+Please make sure to provide valid database credentials for the database server at `localhost`.
+2025-03-17T23:47:14.877Z [INFO]: ::1 - - [17/Mar/2025:23:47:14 +0000] "POST /api/auth/signup HTTP/1.1" 404 610 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-17T23:47:38.546Z [ERROR]: [POST] /api/auth/signup - PrismaClientInitializationError: 
+Invalid `prisma.user.create()` invocation in
+C:\Users\misba\OneDrive\Desktop\code\be\substack-clone-api\src\prismaService\user.prisma.ts:24:38
+
+  21 
+  22 static async create(user:{ name: string; email: string; password: string }) {
+  23     try {
+→ 24         return await prisma.user.create(
+Authentication failed against database server at `localhost`, the provided database credentials for `root` are not valid.
+
+Please make sure to provide valid database credentials for the database server at `localhost`.
+2025-03-17T23:47:38.550Z [INFO]: ::1 - - [17/Mar/2025:23:47:38 +0000] "POST /api/auth/signup HTTP/1.1" 404 610 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-17T23:48:51.046Z [ERROR]: [POST] /api/auth/signup - PrismaClientInitializationError: 
+Invalid `prisma.user.create()` invocation in
+C:\Users\misba\OneDrive\Desktop\code\be\substack-clone-api\src\prismaService\user.prisma.ts:24:38
+
+  21 
+  22 static async create(user:{ name: string; email: string; password: string }) {
+  23     try {
+→ 24         return await prisma.user.create(
+Authentication failed against database server at `localhost`, the provided database credentials for `root` are not valid.
+
+Please make sure to provide valid database credentials for the database server at `localhost`.
+2025-03-17T23:48:51.051Z [INFO]: ::1 - - [17/Mar/2025:23:48:51 +0000] "POST /api/auth/signup HTTP/1.1" 404 610 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T00:00:39.601Z [ERROR]: [POST] /api/auth/signup - PrismaClientKnownRequestError: 
+Invalid `prisma.user.create()` invocation in
+C:\Users\misba\OneDrive\Desktop\code\be\substack-clone-api\src\prismaService\user.prisma.ts:24:38
+
+  21 
+  22 static async create(user:{ name: string; email: string; password: string }) {
+  23     try {
+→ 24         return await prisma.user.create(
+The table `users` does not exist in the current database.
+2025-03-18T00:00:39.604Z [INFO]: ::1 - - [18/Mar/2025:00:00:39 +0000] "POST /api/auth/signup HTTP/1.1" 404 446 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T00:01:24.495Z [INFO]: ::1 - - [18/Mar/2025:00:01:24 +0000] "POST /api/auth/signup HTTP/1.1" 201 436 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T00:02:09.070Z [ERROR]: [POST] /api/auth/signup - PrismaClientKnownRequestError: 
+Invalid `prisma.user.create()` invocation in
+C:\Users\misba\OneDrive\Desktop\code\be\substack-clone-api\src\prismaService\user.prisma.ts:24:38
+
+  21 
+  22 static async create(user:{ name: string; email: string; password: string }) {
+  23     try {
+→ 24         return await prisma.user.create(
+Unique constraint failed on the constraint: `users_email_key`
+2025-03-18T00:02:09.083Z [INFO]: ::1 - - [18/Mar/2025:00:02:09 +0000] "POST /api/auth/signup HTTP/1.1" 404 450 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T00:02:49.294Z [ERROR]: [POST] /api/auth/signup - User already exists
+2025-03-18T00:02:49.307Z [INFO]: ::1 - - [18/Mar/2025:00:02:49 +0000] "POST /api/auth/signup HTTP/1.1" 404 62 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T00:04:02.967Z [INFO]: ::1 - - [18/Mar/2025:00:04:02 +0000] "GET /api/auth/profile HTTP/1.1" 401 42 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T00:15:06.402Z [ERROR]: [POST] /api/auth/signup - User already exists
+2025-03-18T00:15:06.414Z [INFO]: ::1 - - [18/Mar/2025:00:15:06 +0000] "POST /api/auth/signup HTTP/1.1" 404 62 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T00:17:46.035Z [INFO]: ::1 - - [18/Mar/2025:00:17:46 +0000] "POST /api/auth/signup HTTP/1.1" 201 142 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T00:22:54.343Z [ERROR]: [POST] /api/auth/signin - Expected ':' after property name in JSON at position 11 (line 3 column 1)
+2025-03-18T00:22:54.352Z [INFO]: ::1 - - [18/Mar/2025:00:22:54 +0000] "POST /api/auth/signin HTTP/1.1" 404 116 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T00:23:10.110Z [ERROR]: [POST] /api/auth/signin - Missing credentials
+2025-03-18T00:23:10.113Z [INFO]: ::1 - - [18/Mar/2025:00:23:10 +0000] "POST /api/auth/signin HTTP/1.1" 404 62 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T00:23:30.583Z [ERROR]: [POST] /api/auth/signin - User not found
+2025-03-18T00:23:30.585Z [INFO]: ::1 - - [18/Mar/2025:00:23:30 +0000] "POST /api/auth/signin HTTP/1.1" 404 57 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T00:23:43.751Z [INFO]: ::1 - - [18/Mar/2025:00:23:43 +0000] "POST /api/auth/signup HTTP/1.1" 201 142 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T00:23:51.869Z [INFO]: ::1 - - [18/Mar/2025:00:23:51 +0000] "POST /api/auth/signin HTTP/1.1" 200 58 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T00:24:02.588Z [INFO]: ::1 - - [18/Mar/2025:00:24:02 +0000] "GET /api/auth/profile HTTP/1.1" 200 298 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T00:28:49.601Z [INFO]: ::1 - - [18/Mar/2025:00:28:49 +0000] "POST /api/auth/reset-password HTTP/1.1" 200 142 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T00:38:41.735Z [INFO]: ::1 - - [18/Mar/2025:00:38:41 +0000] "POST /api/auth/reset-password HTTP/1.1" 200 142 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T00:38:49.556Z [ERROR]: [POST] /api/auth/signin - User not found
+2025-03-18T00:38:49.558Z [INFO]: ::1 - - [18/Mar/2025:00:38:49 +0000] "POST /api/auth/signin HTTP/1.1" 404 57 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T00:39:20.005Z [ERROR]: [POST] /api/auth/signin - Please verify your account
+2025-03-18T00:39:20.016Z [INFO]: ::1 - - [18/Mar/2025:00:39:20 +0000] "POST /api/auth/signin HTTP/1.1" 404 69 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T01:13:03.295Z [ERROR]: [POST] /api/auth/signin - Please verify your account
+2025-03-18T01:13:03.308Z [INFO]: ::1 - - [18/Mar/2025:01:13:03 +0000] "POST /api/auth/signin HTTP/1.1" 404 69 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:25:35.913Z [ERROR]: [POST] /api/auth/signin - Missing credentials
+2025-03-18T17:25:35.930Z [INFO]: ::1 - - [18/Mar/2025:17:25:35 +0000] "POST /api/auth/signin HTTP/1.1" 404 62 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:26:27.436Z [ERROR]: [POST] /api/auth/signup - Validation failed
+2025-03-18T17:26:27.440Z [INFO]: ::1 - - [18/Mar/2025:17:26:27 +0000] "POST /api/auth/signup HTTP/1.1" 404 60 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:27:07.222Z [ERROR]: [POST] /api/auth/signup - Validation failed
+2025-03-18T17:27:07.224Z [INFO]: ::1 - - [18/Mar/2025:17:27:07 +0000] "POST /api/auth/signup HTTP/1.1" 404 60 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:27:12.718Z [INFO]: ::1 - - [18/Mar/2025:17:27:12 +0000] "POST /api/auth/signup HTTP/1.1" 201 142 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:29:36.500Z [INFO]: ::1 - - [18/Mar/2025:17:29:36 +0000] "POST /api/auth/verify-otp HTTP/1.1" 200 67 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:30:01.687Z [ERROR]: [POST] /api/auth/verify-otp - Validation failed
+2025-03-18T17:30:01.690Z [INFO]: ::1 - - [18/Mar/2025:17:30:01 +0000] "POST /api/auth/verify-otp HTTP/1.1" 404 60 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:30:15.732Z [ERROR]: [POST] /api/auth/verify-otp - OTP not found
+2025-03-18T17:30:15.735Z [INFO]: ::1 - - [18/Mar/2025:17:30:15 +0000] "POST /api/auth/verify-otp HTTP/1.1" 404 56 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:33:38.614Z [ERROR]: [POST] /api/auth/signup - Validation failed
+2025-03-18T17:33:38.616Z [INFO]: ::1 - - [18/Mar/2025:17:33:38 +0000] "POST /api/auth/signup HTTP/1.1" 404 60 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:34:35.480Z [ERROR]: [POST] /api/auth/signin - Please verify your account
+2025-03-18T17:34:35.482Z [INFO]: ::1 - - [18/Mar/2025:17:34:35 +0000] "POST /api/auth/signin HTTP/1.1" 404 69 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:35:12.637Z [ERROR]: [POST] /api/auth/verify-otp - OTP not found
+2025-03-18T17:35:12.639Z [INFO]: ::1 - - [18/Mar/2025:17:35:12 +0000] "POST /api/auth/verify-otp HTTP/1.1" 404 56 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:36:33.740Z [ERROR]: [POST] /api/auth/signup - User already exists
+2025-03-18T17:36:33.743Z [INFO]: ::1 - - [18/Mar/2025:17:36:33 +0000] "POST /api/auth/signup HTTP/1.1" 404 62 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:38:38.349Z [INFO]: ::1 - - [18/Mar/2025:17:38:38 +0000] "POST /api/auth/signup HTTP/1.1" 201 142 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:38:54.051Z [ERROR]: [POST] /api/auth/verify-otp - Invalid OTP, please try again
+2025-03-18T17:38:54.055Z [INFO]: ::1 - - [18/Mar/2025:17:38:54 +0000] "POST /api/auth/verify-otp HTTP/1.1" 404 72 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:39:05.420Z [ERROR]: [POST] /api/auth/signin - Please verify your account
+2025-03-18T17:39:05.424Z [INFO]: ::1 - - [18/Mar/2025:17:39:05 +0000] "POST /api/auth/signin HTTP/1.1" 404 69 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:39:32.269Z [ERROR]: [POST] /api/auth/verify-otp - Validation failed
+2025-03-18T17:39:32.272Z [INFO]: ::1 - - [18/Mar/2025:17:39:32 +0000] "POST /api/auth/verify-otp HTTP/1.1" 404 60 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:40:02.463Z [ERROR]: [POST] /api/auth/verify-otp - Invalid OTP, please try again
+2025-03-18T17:40:02.471Z [INFO]: ::1 - - [18/Mar/2025:17:40:02 +0000] "POST /api/auth/verify-otp HTTP/1.1" 404 72 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:40:12.249Z [INFO]: ::1 - - [18/Mar/2025:17:40:12 +0000] "POST /api/auth/verify-otp HTTP/1.1" 200 67 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:40:34.097Z [ERROR]: [POST] /api/auth/verify-otp - OTP not found
+2025-03-18T17:40:34.099Z [INFO]: ::1 - - [18/Mar/2025:17:40:34 +0000] "POST /api/auth/verify-otp HTTP/1.1" 404 56 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:40:53.342Z [ERROR]: [POST] /api/auth/signin - Please verify your account
+2025-03-18T17:40:53.344Z [INFO]: ::1 - - [18/Mar/2025:17:40:53 +0000] "POST /api/auth/signin HTTP/1.1" 404 69 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:41:00.384Z [ERROR]: [POST] /api/auth/signin - Please verify your account
+2025-03-18T17:41:00.387Z [INFO]: ::1 - - [18/Mar/2025:17:41:00 +0000] "POST /api/auth/signin HTTP/1.1" 404 69 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:42:10.200Z [INFO]: ::1 - - [18/Mar/2025:17:42:10 +0000] "POST /api/auth/signup HTTP/1.1" 201 142 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:42:37.298Z [INFO]: ::1 - - [18/Mar/2025:17:42:37 +0000] "POST /api/auth/verify-otp HTTP/1.1" 200 67 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:42:47.485Z [INFO]: ::1 - - [18/Mar/2025:17:42:47 +0000] "POST /api/auth/signin HTTP/1.1" 200 58 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:43:15.608Z [INFO]: ::1 - - [18/Mar/2025:17:43:15 +0000] "GET /api/auth/profile HTTP/1.1" 200 305 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:46:46.758Z [INFO]: ::1 - - [18/Mar/2025:17:46:46 +0000] "GET /api/auth/users HTTP/1.1" 404 58 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:48:27.708Z [INFO]: ::1 - - [18/Mar/2025:17:48:27 +0000] "GET /api/users HTTP/1.1" 404 58 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:49:36.910Z [INFO]: ::1 - - [18/Mar/2025:17:49:36 +0000] "GET /api/users HTTP/1.1" 404 58 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:50:52.891Z [INFO]: ::1 - - [18/Mar/2025:17:50:52 +0000] "GET /api/users HTTP/1.1" 200 273 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:53:44.031Z [INFO]: ::1 - - [18/Mar/2025:17:53:44 +0000] "GET /api/users HTTP/1.1" 200 264 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:54:43.753Z [INFO]: ::1 - - [18/Mar/2025:17:54:43 +0000] "POST /api/auth/signup HTTP/1.1" 201 142 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:54:52.768Z [INFO]: ::1 - - [18/Mar/2025:17:54:52 +0000] "GET /api/users HTTP/1.1" 200 264 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:55:46.286Z [INFO]: ::1 - - [18/Mar/2025:17:55:46 +0000] "GET /api/users/2 HTTP/1.1" 404 58 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:56:06.987Z [INFO]: ::1 - - [18/Mar/2025:17:56:06 +0000] "GET /api/users/2 HTTP/1.1" 404 58 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:56:12.928Z [INFO]: ::1 - - [18/Mar/2025:17:56:12 +0000] "GET /api/users/2 HTTP/1.1" 404 58 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:57:00.219Z [ERROR]: [GET] /api/users/2 - AppError: User not found
+2025-03-18T17:57:00.239Z [INFO]: ::1 - - [18/Mar/2025:17:57:00 +0000] "GET /api/users/2 HTTP/1.1" 404 67 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:57:35.059Z [ERROR]: [GET] /api/users/2 - AppError: User not found
+2025-03-18T17:57:35.073Z [INFO]: ::1 - - [18/Mar/2025:17:57:35 +0000] "GET /api/users/2 HTTP/1.1" 404 67 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:57:59.628Z [ERROR]: [GET] /api/users/2 - User not found
+2025-03-18T17:57:59.640Z [INFO]: ::1 - - [18/Mar/2025:17:57:59 +0000] "GET /api/users/2 HTTP/1.1" 404 57 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T17:59:18.020Z [ERROR]: [GET] /api/users/2 - User not found
+2025-03-18T17:59:18.024Z [INFO]: ::1 - - [18/Mar/2025:17:59:18 +0000] "GET /api/users/2 HTTP/1.1" 404 57 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T18:05:46.658Z [INFO]: ::1 - - [18/Mar/2025:18:05:46 +0000] "GET /api/users/5ec338d1-3427-462f-b16c-5f738d787c55 HTTP/1.1" 200 262 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T18:06:54.909Z [ERROR]: [GET] /api/users/5ec338d1-3427-462f-b16c-5f738d787c5i8 - User not found
+2025-03-18T18:06:54.913Z [INFO]: ::1 - - [18/Mar/2025:18:06:54 +0000] "GET /api/users/5ec338d1-3427-462f-b16c-5f738d787c5i8 HTTP/1.1" 404 57 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T18:13:11.138Z [ERROR]: [POST] /api/auth/signup - Validation failed
+2025-03-18T18:13:11.147Z [INFO]: ::1 - - [18/Mar/2025:18:13:11 +0000] "POST /api/auth/signup HTTP/1.1" 404 60 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T18:13:24.763Z [ERROR]: [POST] /api/auth/signup - User already exists
+2025-03-18T18:13:24.765Z [INFO]: ::1 - - [18/Mar/2025:18:13:24 +0000] "POST /api/auth/signup HTTP/1.1" 404 62 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T21:30:26.256Z [INFO]: ::1 - - [18/Mar/2025:21:30:26 +0000] "GET / HTTP/1.1" 404 58 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-03-18T21:30:27.710Z [INFO]: ::1 - - [18/Mar/2025:21:30:27 +0000] "GET /favicon.ico HTTP/1.1" 404 58 "http://localhost:8001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-03-18T21:32:50.189Z [INFO]: ::1 - - [18/Mar/2025:21:32:50 +0000] "GET /api/users/5ec338d1-3427-462f-b16c-5f738d787c55 HTTP/1.1" 200 262 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T21:41:31.949Z [ERROR]: [PATCH] /api/users/5ec338d1-3427-462f-b16c-5f738d787c55 - Expected double-quoted property name in JSON at position 32 (line 3 column 1)
+2025-03-18T21:41:31.967Z [INFO]: ::1 - - [18/Mar/2025:21:41:31 +0000] "PATCH /api/users/5ec338d1-3427-462f-b16c-5f738d787c55 HTTP/1.1" 404 120 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T21:41:38.402Z [INFO]: ::1 - - [18/Mar/2025:21:41:38 +0000] "PATCH /api/users/5ec338d1-3427-462f-b16c-5f738d787c55 HTTP/1.1" 401 42 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T21:41:52.567Z [ERROR]: [POST] /api/auth/signin - User is not verified
+2025-03-18T21:41:52.570Z [INFO]: ::1 - - [18/Mar/2025:21:41:52 +0000] "POST /api/auth/signin HTTP/1.1" 404 63 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T21:43:02.808Z [ERROR]: [POST] /api/auth/verify-otp - OTP not found
+2025-03-18T21:43:02.810Z [INFO]: ::1 - - [18/Mar/2025:21:43:02 +0000] "POST /api/auth/verify-otp HTTP/1.1" 404 56 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T21:43:10.083Z [ERROR]: [POST] /api/auth/verify-otp - OTP not found
+2025-03-18T21:43:10.085Z [INFO]: ::1 - - [18/Mar/2025:21:43:10 +0000] "POST /api/auth/verify-otp HTTP/1.1" 404 56 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T21:47:41.250Z [INFO]: ::1 - - [18/Mar/2025:21:47:41 +0000] "POST /api/auth/verify-otp HTTP/1.1" 200 67 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T21:47:57.645Z [ERROR]: [POST] /api/auth/signin - User is not verified
+2025-03-18T21:47:57.648Z [INFO]: ::1 - - [18/Mar/2025:21:47:57 +0000] "POST /api/auth/signin HTTP/1.1" 404 63 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T21:48:30.299Z [ERROR]: [POST] /api/auth/signin - User is not verified
+2025-03-18T21:48:30.301Z [INFO]: ::1 - - [18/Mar/2025:21:48:30 +0000] "POST /api/auth/signin HTTP/1.1" 404 63 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T21:49:11.796Z [ERROR]: [POST] /api/auth/signin - User is not verified
+2025-03-18T21:49:11.808Z [INFO]: ::1 - - [18/Mar/2025:21:49:11 +0000] "POST /api/auth/signin HTTP/1.1" 404 63 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T21:50:29.012Z [INFO]: ::1 - - [18/Mar/2025:21:50:29 +0000] "POST /api/auth/signin HTTP/1.1" 200 58 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T21:50:45.986Z [INFO]: ::1 - - [18/Mar/2025:21:50:45 +0000] "PATCH /api/users/5ec338d1-3427-462f-b16c-5f738d787c55 HTTP/1.1" 200 67 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T21:50:55.976Z [INFO]: ::1 - - [18/Mar/2025:21:50:55 +0000] "GET /api/users HTTP/1.1" 200 270 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T21:51:25.663Z [INFO]: ::1 - - [18/Mar/2025:21:51:25 +0000] "PATCH /api/users/5ec338d1-3427-462f-b16c-5f738d787c55 HTTP/1.1" 200 67 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-18T21:54:49.823Z [ERROR]: [PATCH] /api/users/5ec338d1-3427-462f-b16c-5f738d787c55 - cannot update other user
+2025-03-18T21:54:49.838Z [INFO]: ::1 - - [18/Mar/2025:21:54:49 +0000] "PATCH /api/users/5ec338d1-3427-462f-b16c-5f738d787c55 HTTP/1.1" 404 67 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-19T01:00:13.104Z [INFO]: ::1 - - [19/Mar/2025:01:00:13 +0000] "GET / HTTP/1.1" 404 58 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-19T01:01:38.952Z [INFO]: ::1 - - [19/Mar/2025:01:01:38 +0000] "GET / HTTP/1.1" 404 58 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-19T01:03:42.437Z [INFO]: ::1 - - [19/Mar/2025:01:03:42 +0000] "GET / HTTP/1.1" 404 58 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-19T01:04:50.247Z [INFO]: ::1 - - [19/Mar/2025:01:04:50 +0000] "GET / HTTP/1.1" 404 58 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-19T01:08:46.019Z [INFO]: ::1 - - [19/Mar/2025:01:08:46 +0000] "GET / HTTP/1.1" 404 58 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-19T01:09:39.365Z [INFO]: ::1 - - [19/Mar/2025:01:09:39 +0000] "GET / HTTP/1.1" 404 58 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-21T15:05:41.134Z [INFO]: ::1 - - [21/Mar/2025:15:05:41 +0000] "POST /api/auth/signup HTTP/1.1" 201 145 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-21T15:07:04.015Z [ERROR]: [POST] /api/auth/signup - User already exists
+2025-03-21T15:07:04.022Z [INFO]: ::1 - - [21/Mar/2025:15:07:04 +0000] "POST /api/auth/signup HTTP/1.1" 404 62 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-21T15:09:45.579Z [INFO]: ::1 - - [21/Mar/2025:15:09:45 +0000] "POST /api/auth/signup HTTP/1.1" 201 122 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-21T15:15:40.915Z [INFO]: ::1 - - [21/Mar/2025:15:15:40 +0000] "POST /api/auth/signup HTTP/1.1" 201 122 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-21T15:17:42.799Z [INFO]: ::1 - - [21/Mar/2025:15:17:42 +0000] "POST /api/auth/signup HTTP/1.1" 201 122 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-21T15:18:05.145Z [INFO]: ::1 - - [21/Mar/2025:15:18:05 +0000] "POST /api/auth/signup HTTP/1.1" 201 122 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-21T15:19:32.017Z [INFO]: ::1 - - [21/Mar/2025:15:19:32 +0000] "POST /api/auth/signup HTTP/1.1" 201 122 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-21T15:20:34.065Z [INFO]: ::1 - - [21/Mar/2025:15:20:34 +0000] "POST /api/auth/signup HTTP/1.1" 201 122 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-21T15:22:08.033Z [INFO]: ::1 - - [21/Mar/2025:15:22:08 +0000] "POST /api/auth/signup HTTP/1.1" 201 122 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-21T15:23:33.643Z [INFO]: ::1 - - [21/Mar/2025:15:23:33 +0000] "POST /api/auth/signup HTTP/1.1" 201 122 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-21T15:27:13.103Z [ERROR]: [POST] /api/auth/signup - User already exists
+2025-03-21T15:27:13.105Z [INFO]: ::1 - - [21/Mar/2025:15:27:13 +0000] "POST /api/auth/signup HTTP/1.1" 404 62 "-" "Apidog/1.0.0 (https://apidog.com)"
+2025-03-21T15:27:27.358Z [INFO]: ::1 - - [21/Mar/2025:15:27:27 +0000] "POST /api/auth/signup HTTP/1.1" 201 122 "-" "Apidog/1.0.0 (https://apidog.com)"

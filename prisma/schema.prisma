@@ -1,0 +1,108 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Avatar {
+  id      String @id @default(uuid())
+  url     String
+  imageId String
+  userId  String @unique
+  user    User?  @relation(fields: [userId], references: [id])
+
+  @@map("user_avatars")
+}
+
+model User {
+  id           String         @id @default(uuid())
+  email        String         @unique
+  password     String?
+  avatarId     String?
+  avatar       Avatar?
+  role         Role           @default(USER)
+  name         String?
+  bio          String?
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+  posts        Post[]
+  isVerified   Boolean        @default(false)
+  Notification Notification[]
+
+  @@map("users")
+}
+
+model Otp {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  otp       Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("otps")
+}
+
+enum Role {
+  USER
+  WRITER
+  ADMIN
+}
+
+model PostImage {
+  id      String @id @default(uuid())
+  url     String
+  imageId String
+  postId  String @unique
+  post    Post   @relation(fields: [postId], references: [id])
+}
+
+model Post {
+  id        String     @id @default(uuid())
+  title     String
+  body      String
+  authorId  String
+  author    User       @relation(fields: [authorId], references: [id])
+  Section   Section[]
+  PostImage PostImage?
+
+  @@map("posts")
+}
+
+model Section {
+  id           String   @id @default(uuid())
+  sectionTitle String
+  content      String
+  postId       String
+  post         Post     @relation(fields: [postId], references: [id])
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@map("sections")
+}
+
+model Notification {
+  id              String           @id @default(uuid())
+  message         String
+  type            NotificationType
+  relatedEntityId String?
+  relatedEntity   String?
+  userId          String
+  user            User             @relation(fields: [userId], references: [id])
+  isRead          Boolean          @default(false)
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  @@index([userId])
+  @@map("notifications")
+}
+
+enum NotificationType {
+  COMMENT
+  LIKE
+  FOLLOW
+  NEW_POST
+  SYSTEM
+}
