@@ -41271,7 +41271,6 @@ var require_client = __commonJS({
         "db"
       ],
       "activeProvider": "mysql",
-      "postinstall": false,
       "inlineDatasources": {
         "db": {
           "url": {
