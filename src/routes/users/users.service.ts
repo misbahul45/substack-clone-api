@@ -100,15 +100,29 @@ export class UsersService{
             }
 
             await prisma.user.update({
-                where:{id},
-                data:{
-                    ...(data.name && {name: data.name}),
-                    ...(data.bio && {bio: data.bio}),
-                    ...(data.role && {role: data.role}),
-                    ...(data.email && {email: data.email})
-                }
-            })
-
+                where: { id },
+                data: {
+                    ...(data.name && { name: data.name }),
+                    ...(data.bio && { bio: data.bio }),
+                    ...(data.role && { role: data.role }),
+                    ...(data.email && { email: data.email }),
+                    avatar: data.avatar
+                        ? {
+                              upsert: {
+                                  create: {
+                                      url: data.avatar.url,
+                                      imageId: data.avatar.imageId,
+                                  },
+                                  update: {
+                                      url: data.avatar.url,
+                                      imageId: data.avatar.imageId,
+                                  },
+                              },
+                          }
+                        : undefined,
+                },
+            });
+        
             return {
                 success: true,
                 status: 200,
@@ -119,6 +133,4 @@ export class UsersService{
             throw new AppError((error as Error).message, status);
         }
     }
-    
-
 }

@@ -7,6 +7,10 @@ export class UsersValidation {
         email: z.string().email({ message: 'Invalid email address' }).optional(),
         bio: z.string().optional(),
         role: z.nativeEnum(Role).optional(),
+        avatar:z.object({
+            url:z.string(),
+            imageId:z.string()
+        }).optional(),
     })
 }
 
