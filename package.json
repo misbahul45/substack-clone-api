@@ -6,12 +6,15 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "prisma:generate": "prisma generate",
-    "build": "esbuild src/server.ts --bundle --platform=node --outfile=dist/server.js --external:mock-aws-s3 --external:aws-sdk --external:nock --external:bcrypt --loader:.html=text && copy package.json dist\\",
+    "build": "esbuild src/server.ts --bundle --platform=node --outfile=dist/server.js --external:mock-aws-s3 --external:aws-sdk --external:nock --external:bcrypt --loader:.html=text",
     "start": "node dist/server.js",
     "prepare": "husky"
   },
+  "engines": {
+    "node": "20.17.0"
+  },
   "keywords": [],
-  "anpm uthor": "",
+  "anpm uthor": "misbahul muttaqin",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {

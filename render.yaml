@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: substack-clone-api
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: node dist/server.js
+    plan: free
+    # Auto-deploy on push to main branch
+    autoDeploy: true
+    # Environment variables if needed
+    envVars:
+      - key: NODE_ENV
+        value: production
