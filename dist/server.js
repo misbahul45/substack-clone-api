@@ -41271,6 +41271,7 @@ var require_client = __commonJS({
         "db"
       ],
       "activeProvider": "mysql",
+      "postinstall": false,
       "inlineDatasources": {
         "db": {
           "url": {
@@ -41328,464 +41329,6 @@ var require_default2 = __commonJS({
     module2.exports = {
       ...require_default()
     };
-  }
-});
-
-// node_modules/@phc/format/index.js
-var require_format2 = __commonJS({
-  "node_modules/@phc/format/index.js"(exports2, module2) {
-    var idRegex = /^[a-z0-9-]{1,32}$/;
-    var nameRegex = /^[a-z0-9-]{1,32}$/;
-    var valueRegex = /^[a-zA-Z0-9/+.-]+$/;
-    var b64Regex = /^([a-zA-Z0-9/+.-]+|)$/;
-    var decimalRegex = /^((-)?[1-9]\d*|0)$/;
-    var versionRegex = /^v=(\d+)$/;
-    function objToKeyVal(obj) {
-      return objectKeys(obj).map((k2) => [k2, obj[k2]].join("=")).join(",");
-    }
-    function keyValtoObj(str) {
-      const obj = {};
-      str.split(",").forEach((ps2) => {
-        const pss = ps2.split("=");
-        if (pss.length < 2) {
-          throw new TypeError(`params must be in the format name=value`);
-        }
-        obj[pss.shift()] = pss.join("=");
-      });
-      return obj;
-    }
-    function objectKeys(object) {
-      return Object.keys(object);
-    }
-    function objectValues(object) {
-      if (typeof Object.values === "function") return Object.values(object);
-      return objectKeys(object).map((k2) => object[k2]);
-    }
-    function serialize(opts) {
-      const fields = [""];
-      if (typeof opts !== "object" || opts === null) {
-        throw new TypeError("opts must be an object");
-      }
-      if (typeof opts.id !== "string") {
-        throw new TypeError("id must be a string");
-      }
-      if (!idRegex.test(opts.id)) {
-        throw new TypeError(`id must satisfy ${idRegex}`);
-      }
-      fields.push(opts.id);
-      if (typeof opts.version !== "undefined") {
-        if (typeof opts.version !== "number" || opts.version < 0 || !Number.isInteger(opts.version)) {
-          throw new TypeError("version must be a positive integer number");
-        }
-        fields.push(`v=${opts.version}`);
-      }
-      if (typeof opts.params !== "undefined") {
-        if (typeof opts.params !== "object" || opts.params === null) {
-          throw new TypeError("params must be an object");
-        }
-        const pk = objectKeys(opts.params);
-        if (!pk.every((p) => nameRegex.test(p))) {
-          throw new TypeError(`params names must satisfy ${nameRegex}`);
-        }
-        pk.forEach((k2) => {
-          if (typeof opts.params[k2] === "number") {
-            opts.params[k2] = opts.params[k2].toString();
-          } else if (Buffer.isBuffer(opts.params[k2])) {
-            opts.params[k2] = opts.params[k2].toString("base64").split("=")[0];
-          }
-        });
-        const pv = objectValues(opts.params);
-        if (!pv.every((v) => typeof v === "string")) {
-          throw new TypeError("params values must be strings");
-        }
-        if (!pv.every((v) => valueRegex.test(v))) {
-          throw new TypeError(`params values must satisfy ${valueRegex}`);
-        }
-        const strpar = objToKeyVal(opts.params);
-        fields.push(strpar);
-      }
-      if (typeof opts.salt !== "undefined") {
-        if (!Buffer.isBuffer(opts.salt)) {
-          throw new TypeError("salt must be a Buffer");
-        }
-        fields.push(opts.salt.toString("base64").split("=")[0]);
-        if (typeof opts.hash !== "undefined") {
-          if (!Buffer.isBuffer(opts.hash)) {
-            throw new TypeError("hash must be a Buffer");
-          }
-          fields.push(opts.hash.toString("base64").split("=")[0]);
-        }
-      }
-      const phcstr = fields.join("$");
-      return phcstr;
-    }
-    function deserialize(phcstr) {
-      if (typeof phcstr !== "string" || phcstr === "") {
-        throw new TypeError("pchstr must be a non-empty string");
-      }
-      if (phcstr[0] !== "$") {
-        throw new TypeError("pchstr must contain a $ as first char");
-      }
-      const fields = phcstr.split("$");
-      fields.shift();
-      let maxf = 5;
-      if (!versionRegex.test(fields[1])) maxf--;
-      if (fields.length > maxf) {
-        throw new TypeError(
-          `pchstr contains too many fileds: ${fields.length}/${maxf}`
-        );
-      }
-      const id2 = fields.shift();
-      if (!idRegex.test(id2)) {
-        throw new TypeError(`id must satisfy ${idRegex}`);
-      }
-      let version;
-      if (versionRegex.test(fields[0])) {
-        version = parseInt(fields.shift().match(versionRegex)[1], 10);
-      }
-      let hash;
-      let salt;
-      if (b64Regex.test(fields[fields.length - 1])) {
-        if (fields.length > 1 && b64Regex.test(fields[fields.length - 2])) {
-          hash = Buffer.from(fields.pop(), "base64");
-          salt = Buffer.from(fields.pop(), "base64");
-        } else {
-          salt = Buffer.from(fields.pop(), "base64");
-        }
-      }
-      let params;
-      if (fields.length > 0) {
-        const parstr = fields.pop();
-        params = keyValtoObj(parstr);
-        if (!objectKeys(params).every((p) => nameRegex.test(p))) {
-          throw new TypeError(`params names must satisfy ${nameRegex}`);
-        }
-        const pv = objectValues(params);
-        if (!pv.every((v) => valueRegex.test(v))) {
-          throw new TypeError(`params values must satisfy ${valueRegex}`);
-        }
-        const pk = objectKeys(params);
-        pk.forEach((k2) => {
-          params[k2] = decimalRegex.test(params[k2]) ? parseInt(params[k2], 10) : params[k2];
-        });
-      }
-      if (fields.length > 0) {
-        throw new TypeError(`pchstr contains unrecognized fileds: ${fields}`);
-      }
-      const phcobj = { id: id2 };
-      if (version) phcobj.version = version;
-      if (params) phcobj.params = params;
-      if (salt) phcobj.salt = salt;
-      if (hash) phcobj.hash = hash;
-      return phcobj;
-    }
-    module2.exports = {
-      serialize,
-      deserialize
-    };
-  }
-});
-
-// node_modules/node-gyp-build/node-gyp-build.js
-var require_node_gyp_build = __commonJS({
-  "node_modules/node-gyp-build/node-gyp-build.js"(exports2, module2) {
-    var fs = require("fs");
-    var path = require("path");
-    var os2 = require("os");
-    var runtimeRequire = typeof __webpack_require__ === "function" ? __non_webpack_require__ : require;
-    var vars = process.config && process.config.variables || {};
-    var prebuildsOnly = !!process.env.PREBUILDS_ONLY;
-    var abi = process.versions.modules;
-    var runtime = isElectron() ? "electron" : isNwjs() ? "node-webkit" : "node";
-    var arch = process.env.npm_config_arch || os2.arch();
-    var platform = process.env.npm_config_platform || os2.platform();
-    var libc = process.env.LIBC || (isAlpine(platform) ? "musl" : "glibc");
-    var armv = process.env.ARM_VERSION || (arch === "arm64" ? "8" : vars.arm_version) || "";
-    var uv = (process.versions.uv || "").split(".")[0];
-    module2.exports = load;
-    function load(dir) {
-      return runtimeRequire(load.resolve(dir));
-    }
-    load.resolve = load.path = function(dir) {
-      dir = path.resolve(dir || ".");
-      try {
-        var name = runtimeRequire(path.join(dir, "package.json")).name.toUpperCase().replace(/-/g, "_");
-        if (process.env[name + "_PREBUILD"]) dir = process.env[name + "_PREBUILD"];
-      } catch (err) {
-      }
-      if (!prebuildsOnly) {
-        var release = getFirst(path.join(dir, "build/Release"), matchBuild);
-        if (release) return release;
-        var debug = getFirst(path.join(dir, "build/Debug"), matchBuild);
-        if (debug) return debug;
-      }
-      var prebuild = resolve(dir);
-      if (prebuild) return prebuild;
-      var nearby = resolve(path.dirname(process.execPath));
-      if (nearby) return nearby;
-      var target = [
-        "platform=" + platform,
-        "arch=" + arch,
-        "runtime=" + runtime,
-        "abi=" + abi,
-        "uv=" + uv,
-        armv ? "armv=" + armv : "",
-        "libc=" + libc,
-        "node=" + process.versions.node,
-        process.versions.electron ? "electron=" + process.versions.electron : "",
-        typeof __webpack_require__ === "function" ? "webpack=true" : ""
-        // eslint-disable-line
-      ].filter(Boolean).join(" ");
-      throw new Error("No native build was found for " + target + "\n    loaded from: " + dir + "\n");
-      function resolve(dir2) {
-        var tuples = readdirSync(path.join(dir2, "prebuilds")).map(parseTuple);
-        var tuple = tuples.filter(matchTuple(platform, arch)).sort(compareTuples)[0];
-        if (!tuple) return;
-        var prebuilds = path.join(dir2, "prebuilds", tuple.name);
-        var parsed = readdirSync(prebuilds).map(parseTags);
-        var candidates = parsed.filter(matchTags(runtime, abi));
-        var winner = candidates.sort(compareTags(runtime))[0];
-        if (winner) return path.join(prebuilds, winner.file);
-      }
-    };
-    function readdirSync(dir) {
-      try {
-        return fs.readdirSync(dir);
-      } catch (err) {
-        return [];
-      }
-    }
-    function getFirst(dir, filter) {
-      var files = readdirSync(dir).filter(filter);
-      return files[0] && path.join(dir, files[0]);
-    }
-    function matchBuild(name) {
-      return /\.node$/.test(name);
-    }
-    function parseTuple(name) {
-      var arr = name.split("-");
-      if (arr.length !== 2) return;
-      var platform2 = arr[0];
-      var architectures = arr[1].split("+");
-      if (!platform2) return;
-      if (!architectures.length) return;
-      if (!architectures.every(Boolean)) return;
-      return { name, platform: platform2, architectures };
-    }
-    function matchTuple(platform2, arch2) {
-      return function(tuple) {
-        if (tuple == null) return false;
-        if (tuple.platform !== platform2) return false;
-        return tuple.architectures.includes(arch2);
-      };
-    }
-    function compareTuples(a, b2) {
-      return a.architectures.length - b2.architectures.length;
-    }
-    function parseTags(file) {
-      var arr = file.split(".");
-      var extension = arr.pop();
-      var tags = { file, specificity: 0 };
-      if (extension !== "node") return;
-      for (var i = 0; i < arr.length; i++) {
-        var tag = arr[i];
-        if (tag === "node" || tag === "electron" || tag === "node-webkit") {
-          tags.runtime = tag;
-        } else if (tag === "napi") {
-          tags.napi = true;
-        } else if (tag.slice(0, 3) === "abi") {
-          tags.abi = tag.slice(3);
-        } else if (tag.slice(0, 2) === "uv") {
-          tags.uv = tag.slice(2);
-        } else if (tag.slice(0, 4) === "armv") {
-          tags.armv = tag.slice(4);
-        } else if (tag === "glibc" || tag === "musl") {
-          tags.libc = tag;
-        } else {
-          continue;
-        }
-        tags.specificity++;
-      }
-      return tags;
-    }
-    function matchTags(runtime2, abi2) {
-      return function(tags) {
-        if (tags == null) return false;
-        if (tags.runtime && tags.runtime !== runtime2 && !runtimeAgnostic(tags)) return false;
-        if (tags.abi && tags.abi !== abi2 && !tags.napi) return false;
-        if (tags.uv && tags.uv !== uv) return false;
-        if (tags.armv && tags.armv !== armv) return false;
-        if (tags.libc && tags.libc !== libc) return false;
-        return true;
-      };
-    }
-    function runtimeAgnostic(tags) {
-      return tags.runtime === "node" && tags.napi;
-    }
-    function compareTags(runtime2) {
-      return function(a, b2) {
-        if (a.runtime !== b2.runtime) {
-          return a.runtime === runtime2 ? -1 : 1;
-        } else if (a.abi !== b2.abi) {
-          return a.abi ? -1 : 1;
-        } else if (a.specificity !== b2.specificity) {
-          return a.specificity > b2.specificity ? -1 : 1;
-        } else {
-          return 0;
-        }
-      };
-    }
-    function isNwjs() {
-      return !!(process.versions && process.versions.nw);
-    }
-    function isElectron() {
-      if (process.versions && process.versions.electron) return true;
-      if (process.env.ELECTRON_RUN_AS_NODE) return true;
-      return typeof window !== "undefined" && window.process && window.process.type === "renderer";
-    }
-    function isAlpine(platform2) {
-      return platform2 === "linux" && fs.existsSync("/etc/alpine-release");
-    }
-    load.parseTags = parseTags;
-    load.matchTags = matchTags;
-    load.compareTags = compareTags;
-    load.parseTuple = parseTuple;
-    load.matchTuple = matchTuple;
-    load.compareTuples = compareTuples;
-  }
-});
-
-// node_modules/node-gyp-build/index.js
-var require_node_gyp_build2 = __commonJS({
-  "node_modules/node-gyp-build/index.js"(exports2, module2) {
-    var runtimeRequire = typeof __webpack_require__ === "function" ? __non_webpack_require__ : require;
-    if (typeof runtimeRequire.addon === "function") {
-      module2.exports = runtimeRequire.addon.bind(runtimeRequire);
-    } else {
-      module2.exports = require_node_gyp_build();
-    }
-  }
-});
-
-// node_modules/argon2/argon2.cjs
-var require_argon2 = __commonJS({
-  "node_modules/argon2/argon2.cjs"(exports2, module2) {
-    var assert = require("node:assert");
-    var { randomBytes, timingSafeEqual } = require("node:crypto");
-    var { promisify } = require("node:util");
-    var { deserialize, serialize } = require_format2();
-    var gypBuild = require_node_gyp_build2();
-    var { hash: bindingsHash } = gypBuild(__dirname);
-    var generateSalt = promisify(randomBytes);
-    var argon2d = 0;
-    var argon2i = 1;
-    var argon2id = 2;
-    module2.exports.argon2d = argon2d;
-    module2.exports.argon2i = argon2i;
-    module2.exports.argon2id = argon2id;
-    var types = Object.freeze({ argon2d, argon2i, argon2id });
-    var names = Object.freeze({
-      [types.argon2d]: "argon2d",
-      [types.argon2i]: "argon2i",
-      [types.argon2id]: "argon2id"
-    });
-    var defaults = Object.freeze({
-      hashLength: 32,
-      timeCost: 3,
-      memoryCost: 1 << 16,
-      parallelism: 4,
-      type: argon2id,
-      version: 19
-    });
-    var limits = Object.freeze({
-      hashLength: { min: 4, max: 2 ** 32 - 1 },
-      memoryCost: { min: 1 << 10, max: 2 ** 32 - 1 },
-      timeCost: { min: 2, max: 2 ** 32 - 1 },
-      parallelism: { min: 1, max: 2 ** 24 - 1 }
-    });
-    module2.exports.limits = limits;
-    async function hash(password, options) {
-      let { raw: raw2, salt, ...rest } = { ...defaults, ...options };
-      for (const [key, { min, max }] of Object.entries(limits)) {
-        const value = rest[key];
-        assert(
-          min <= value && value <= max,
-          `Invalid ${key}, must be between ${min} and ${max}.`
-        );
-      }
-      salt = salt ?? await generateSalt(16);
-      const {
-        hashLength,
-        secret = Buffer.alloc(0),
-        type,
-        version,
-        memoryCost: m,
-        timeCost: t,
-        parallelism: p,
-        associatedData: data = Buffer.alloc(0)
-      } = rest;
-      const hash2 = await bindingsHash({
-        password: Buffer.from(password),
-        salt,
-        secret,
-        data,
-        hashLength,
-        m,
-        t,
-        p,
-        version,
-        type
-      });
-      if (raw2) {
-        return hash2;
-      }
-      return serialize({
-        id: names[type],
-        version,
-        params: { m, t, p, ...data.byteLength > 0 ? { data } : {} },
-        salt,
-        hash: hash2
-      });
-    }
-    module2.exports.hash = hash;
-    function needsRehash(digest, options = {}) {
-      const { memoryCost, timeCost, version } = { ...defaults, ...options };
-      const {
-        version: v,
-        params: { m, t }
-      } = deserialize(digest);
-      return +v !== +version || +m !== +memoryCost || +t !== +timeCost;
-    }
-    module2.exports.needsRehash = needsRehash;
-    async function verify(digest, password, options = {}) {
-      const { id: id2, ...rest } = deserialize(digest);
-      if (!(id2 in types)) {
-        return false;
-      }
-      const {
-        version = 16,
-        params: { m, t, p, data = "" },
-        salt,
-        hash: hash2
-      } = rest;
-      const { secret = Buffer.alloc(0) } = options;
-      return timingSafeEqual(
-        await bindingsHash({
-          password: Buffer.from(password),
-          salt,
-          secret,
-          data: Buffer.from(data, "base64"),
-          hashLength: hash2.byteLength,
-          m: +m,
-          t: +t,
-          p: +p,
-          version: +version,
-          type: types[id2]
-        }),
-        hash2
-      );
-    }
-    module2.exports.verify = verify;
   }
 });
 
@@ -76499,7 +76042,6 @@ var AuthValidations = class {
 };
 
 // src/routes/auth/auth.service.ts
-var import_argon2 = __toESM(require_argon2());
 var import_jsonwebtoken = __toESM(require_jsonwebtoken());
 
 // src/lib/env-file.ts
@@ -76623,9 +76165,16 @@ var createEmail = (to2, subject, data) => {
 };
 
 // src/lib/util.ts
+var import_bcrypt = __toESM(require("bcrypt"));
 function datediff(first, second) {
   return (second.getTime() - first.getTime()) / (1e3 * 60 * 60 * 24);
 }
+var hashedPassword = async (password) => {
+  return await import_bcrypt.default.hash(password, 10);
+};
+var isMatchedPassword = async (password, hashedPassword2) => {
+  return await import_bcrypt.default.compare(password, hashedPassword2);
+};
 
 // src/routes/auth/auth.service.ts
 var AuthService = class {
@@ -76642,7 +76191,7 @@ var AuthService = class {
           }))
         );
       }
-      const hashedPassword = await import_argon2.default.hash(data.password);
+      data.password = await hashedPassword(data.password);
       const userExists = await prisma_default.user.findUnique({
         where: {
           email: data.email
@@ -76655,7 +76204,7 @@ var AuthService = class {
         data: {
           name: data.name,
           email: data.email,
-          password: hashedPassword
+          password: data.password
         }
       });
       const otp = Math.floor(Math.random() * (999999 - 1e5 + 1)) + 1e5;
@@ -76844,7 +76393,7 @@ var AuthService = class {
       if (findOtp) {
         throw new AppError("Please verify your otp first", 400);
       }
-      data.password = await import_argon2.default.hash(data.password);
+      data.password = await hashedPassword(data.password);
       await prisma_default.user.update({
         where: {
           email: data.email
@@ -76872,7 +76421,6 @@ var import_jsonwebtoken2 = __toESM(require_jsonwebtoken());
 var import_passport = __toESM(require_lib5());
 var import_passport_local = __toESM(require_lib6());
 var import_passport_jwt = __toESM(require_lib7());
-var import_argon22 = __toESM(require_argon2());
 import_passport.default.use(
   new import_passport_local.Strategy({ usernameField: "email" }, async (email, password, done) => {
     try {
@@ -76889,7 +76437,7 @@ import_passport.default.use(
       if (!user) {
         return done(null, false, { message: "User not found" });
       }
-      const isMatch = await import_argon22.default.verify(user.password || "", password);
+      const isMatch = await isMatchedPassword(password, user.password || "");
       if (!isMatch) {
         return done(null, false, { message: "Incorrect password" });
       }
@@ -77358,6 +76906,9 @@ app.use(import_express3.default.urlencoded({ extended: true }));
 app.use(import_express3.default.json());
 app.use(setupCors());
 app.use(passport_strategy_default.initialize());
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
 app.use("/api/auth/", auth_controller_default);
 app.use("/api/users/", users_controller_default);
 app.use(errorMiddleware);

@@ -3,11 +3,10 @@ import { Validation } from "../../lib/zod";
 import { AppError } from "../../middleware/error.middleware";
 import { WebResponse } from "../../types/web.types";
 import AuthValidations, {  RegisterBody, UpdatePasswordBody, VerifyOtpBody } from "./auth.validations";
-import argon from 'argon2';
 import jwt from 'jsonwebtoken';
 import ENVDATA from "../../lib/env-file";
 import { createEmail, transporterEmail } from "../../lib/email";
-import { datediff } from "../../lib/util";
+import { datediff, hashedPassword } from "../../lib/util";
 
 export class AuthService {
     static async signup(data: RegisterBody): Promise<WebResponse> {
@@ -24,7 +23,7 @@ export class AuthService {
                 );
             }            
 
-            const hashedPassword = await argon.hash(data.password);
+            data.password = await hashedPassword(data.password);
 
             const userExists = await prisma.user.findUnique({
                 where: {
@@ -39,7 +38,7 @@ export class AuthService {
                 data: {
                     name: data.name,
                     email: data.email,
-                    password: hashedPassword,
+                    password: data.password
                 }
             })
 
@@ -256,7 +255,7 @@ export class AuthService {
                 throw new AppError("Please verify your otp first", 400);
             }
 
-             data.password=await argon.hash(data.password);
+             data.password=await hashedPassword(data.password);
 
             await prisma.user.update({
                 where: {

@@ -32,6 +32,9 @@ app.use(passport.initialize());
 
 
 //setup route
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+})
 app.use('/api/auth/', authController);
 app.use('/api/users/', usersController);
 

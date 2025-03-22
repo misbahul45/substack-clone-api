@@ -2,10 +2,10 @@ import passport from "passport";
 import { Strategy as LocalStrategy } from "passport-local";
 import { Strategy as JwtStrategy } from "passport-jwt";
 import ENVDATA from "../lib/env-file";
-import argon from "argon2"
 import AuthValidations from "../routes/auth/auth.validations";
 import { Validation } from "../lib/zod";
 import prisma from "../lib/prisma";
+import { isMatchedPassword } from "../lib/util";
 
 
 passport.use(
@@ -25,7 +25,7 @@ passport.use(
         return done(null, false, { message: "User not found" });
       }
 
-      const isMatch = await argon.verify(user.password || '', password);
+      const isMatch = await isMatchedPassword(password, user.password || '');
       if (!isMatch) {
         return done(null, false, { message: "Incorrect password" });
       }
