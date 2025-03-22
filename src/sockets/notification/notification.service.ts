@@ -5,6 +5,17 @@ import { AppError } from "../../middleware/error.middleware";
 import { CreateNotificationBody, NotificationValidation } from "./notification.validation";
 
 export class notificationService{
+    static async getAllNotifications(userId: string): Promise<Notification[]> {
+        try {
+          const notifications = await prisma.notification.findMany({
+            where: { userId },
+            orderBy: { createdAt: 'desc' },
+          });
+          return notifications;
+        } catch (error) {
+          throw new AppError("Failed to fetch notifications", 500);
+        }
+      }      
     static async createNotification(data: CreateNotificationBody): Promise<Notification> {
         try {
             const isValid=Validation.validate(data, NotificationValidation.create);

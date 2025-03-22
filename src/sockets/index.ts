@@ -1,26 +1,34 @@
-import { Server as SocketIOServer } from "socket.io";
 import { Server as HttpServer } from "http";
+import { Server as SocketIOServer } from "socket.io";
 import handleNotification from "./notification/notification.socket";
 
-const setupSockets = (server: HttpServer) => {
-    const io = new SocketIOServer(server, {
-        cors: {
-            origin: "*",
-        }
+export class SocketApp {
+  private static io: SocketIOServer | null = null;
+
+  public static setupSockets(server: HttpServer): SocketIOServer {
+    this.io = new SocketIOServer(server, {
+      cors: {
+        origin: process.env.FRONTEND_URL || "http://localhost:3000",
+        methods: ["GET", "POST"],
+        credentials: true,
+      },
     });
 
-    io.on("connection", (socket) => {
-        console.log("🔗 A user connected:", socket.id);
+    this.io.on("connection", (socket) => {
+      console.log(`User connected: ${socket.id}`);
 
-        // Integrasi fitur dengan socket io
-        handleNotification(socket, io);
+      // Tangani notifikasi
+      handleNotification(socket, this.io!);
 
-        socket.on("disconnect", () => {
-            console.log("❌ A user disconnected:", socket.id);
-        });
+      socket.on("disconnect", () => {
+        console.log(`User disconnected: ${socket.id}`);
+      });
     });
 
-    return io;
-};
+    return this.io;
+  }
 
-export default setupSockets;
+  public static getSocketIO(): SocketIOServer | null {
+    return this.io;
+  }
+}

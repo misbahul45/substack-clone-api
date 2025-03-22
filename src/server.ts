@@ -6,19 +6,19 @@ import setupCors from './lib/cors';
 import passport from './strategies/passport.strategy';
 import cookieParser from 'cookie-parser';
 import http from 'http';
-import setupSockets from './sockets';
 
 //import routes 
 import authController from './routes/auth/auth.controller';
 import usersController from './routes/users/users.controller';
 import followersController from './routes/followers/followers.controller';
 import { authenticate } from './middleware/auth.middleware';
+import { SocketApp } from './sockets';
 
 const app: Express = express();
 const port = process.env.PORT || 8001;
 
 const server = http.createServer(app);
-setupSockets(server);
+SocketApp.setupSockets(server);
 
 
 

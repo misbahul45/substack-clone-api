@@ -3,8 +3,19 @@ import { CreateNotificationBody } from "./notification.validation";
 import { notificationService } from "./notification.service";
 
 const handleNotification = (socket: Socket, io: SocketIOServer) => {
-  // Event untuk membuat notifikasi baru
-  socket.on("notification", async (data: CreateNotificationBody) => {
+  //getAll Notification
+  socket.on("get_notifications", async (userId: string) => {
+    try {
+      const notifications = await notificationService.getAllNotifications(userId);
+      socket.emit("notifications", notifications);
+    } catch (error) {
+      socket.emit("notification_error", { message: "Failed to get notifications" });
+    }
+  });
+  
+
+  // Event untuk membuat notifikasi baru  
+  socket.on("add_notification", async (data: CreateNotificationBody) => {
     try {
       const notification = await notificationService.createNotification(data);
       io.emit("notification", notification);
@@ -12,6 +23,7 @@ const handleNotification = (socket: Socket, io: SocketIOServer) => {
       socket.emit("notification_error", { message: "Failed to create notification" });
     }
   });
+
 
   // Event untuk mengupdate notifikasi agar isRead menjadi true
   socket.on("mark_notification_read", async (notificationId: string) => {

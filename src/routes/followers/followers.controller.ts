@@ -41,6 +41,8 @@ class FollowersController {
       res.send("User berhasil berhenti mengikuti user lain");
     });
   }
+
+  
 }
 
 export default new FollowersController().router;
