@@ -76721,7 +76721,19 @@ var UsersService = class {
           ...data.name && { name: data.name },
           ...data.bio && { bio: data.bio },
           ...data.role && { role: data.role },
-          ...data.email && { email: data.email }
+          ...data.email && { email: data.email },
+          avatar: data.avatar ? {
+            upsert: {
+              create: {
+                url: data.avatar.url,
+                imageId: data.avatar.imageId
+              },
+              update: {
+                url: data.avatar.url,
+                imageId: data.avatar.imageId
+              }
+            }
+          } : void 0
         }
       });
       return {
