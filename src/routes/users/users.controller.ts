@@ -1,7 +1,6 @@
 import { NextFunction, Router } from "express";
 import { Request, Response } from "express";
 import { UsersService } from "./users.service";
-import { authenticate } from "../../middleware/auth.middleware";
 import { AppError } from "../../middleware/error.middleware";
 class UsersController{
     public router:Router;
@@ -13,8 +12,8 @@ class UsersController{
     private initializeRoutes():void{
         this.router.get("/:id", this.getUser);
         this.router.get("/", this.getAllUsers);
-        this.router.patch("/:id", authenticate,this.updateUser);
-        this.router.delete("/:id", authenticate,this.deleteUser);
+        this.router.patch("/:id", this.updateUser);
+        this.router.delete("/:id", this.deleteUser);
     }
 
     private async getUser(req:Request, res:Response, next:NextFunction): Promise<void> {
@@ -29,7 +28,10 @@ class UsersController{
 
     private async getAllUsers(req:Request, res:Response, next:NextFunction): Promise<void> {
         try {
-         const result=await UsersService.getAllUsers();
+        const page = parseInt(req.query.page as string) || 1;
+        const limit = parseInt(req.query.limit as string) || 10;
+        const skip = (page - 1) * limit;
+         const result=await UsersService.getAllUsers({ skip, limit });
          res.status(result.status).json(result);
         } catch (error) {
          next(error)

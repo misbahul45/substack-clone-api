@@ -39,7 +39,7 @@ export class UsersService{
     }
     
 
-    static async getAllUsers(): Promise<WebResponse<{ users:AllUserResponse }>> {
+    static async getAllUsers({ skip, limit }:{ skip: number, limit: number }): Promise<WebResponse<{ users:AllUserResponse }>> {
         try {
             const users = await prisma.user.findMany({
                 select: {
@@ -53,8 +53,12 @@ export class UsersService{
                 },
                 where:{
                     isVerified: true
-                }
+                },
+                skip: skip,
+                take: limit
             })
+
+            const totalUser=await prisma.user.count()
 
             return {
                 success: true,
@@ -62,7 +66,12 @@ export class UsersService{
                 data: {
                     users: users
                 },
-                message: "Users fetched successfully"
+                meta: {
+                    pages: Math.ceil(totalUser / limit),
+                    page: skip / limit + 1,
+                    total: totalUser,
+                    skip
+                },
             }
 
         } catch (error) {

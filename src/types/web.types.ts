@@ -2,6 +2,12 @@
 export interface WebResponse<T = undefined> {
     success: boolean;
     status: number;
+    meta?:{
+      pages: number;
+      skip:number;
+      page:number;
+      total: number;
+    },
     message?: string;
     data?: T;
     error?: string;

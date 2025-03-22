@@ -3,12 +3,16 @@ import logger from './lib/logger';
 import morgan from 'morgan';
 import { errorMiddleware, middleware404 } from './middleware/error.middleware';
 import setupCors from './lib/cors';
-import authController from './routes/auth/auth.controller';
 import passport from './strategies/passport.strategy';
 import cookieParser from 'cookie-parser';
-import usersController from './routes/users/users.controller';
 import http from 'http';
 import setupSockets from './sockets';
+
+//import routes 
+import authController from './routes/auth/auth.controller';
+import usersController from './routes/users/users.controller';
+import followersController from './routes/followers/followers.controller';
+import { authenticate } from './middleware/auth.middleware';
 
 const app: Express = express();
 const port = process.env.PORT || 8001;
@@ -36,7 +40,8 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 })
 app.use('/api/auth/', authController);
-app.use('/api/users/', usersController);
+app.use('/api/users/', authenticate,usersController);
+app.use('/api/followers/', authenticate,followersController);
 
 
 //setup middleware

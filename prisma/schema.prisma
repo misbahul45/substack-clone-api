@@ -31,8 +31,24 @@ model User {
   posts        Post[]
   isVerified   Boolean        @default(false)
   Notification Notification[]
+  followers    Follower[]     @relation("UserFollowers")
+  following    Follower[]     @relation("UserFollowing")
 
   @@map("users")
+}
+
+model Follower {
+  id          String   @id @default(uuid())
+  followerId  String
+  followingId String
+  follower    User     @relation("UserFollowing", fields: [followerId], references: [id], onDelete: Cascade)
+  following   User     @relation("UserFollowers", fields: [followingId], references: [id], onDelete: Cascade)
+  createdAt   DateTime @default(now())
+
+  @@unique([followerId, followingId])
+  @@index([followingId])
+  @@index([followerId])
+  @@map("followers")
 }
 
 model Otp {
