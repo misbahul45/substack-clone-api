@@ -1,7 +1,7 @@
 import prisma from "../../lib/prisma";
 import { AppError } from "../../middleware/error.middleware";
 import { WebResponse } from "../../types/web.types";
-import { AllUserResponse, UserResponse } from "./user.types";
+import { AllUserResponse, UserResponse } from "../../types/user.types";
 import { UpdateUserBody } from "./users.validation";
 
 export class UsersService{
