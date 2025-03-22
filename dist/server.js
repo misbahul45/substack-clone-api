@@ -76220,7 +76220,7 @@ var AuthService = class {
       return {
         success: true,
         status: 201,
-        message: "Registration successful, otp sent to your email, Maximum 1 day to reset password"
+        message: "Registration successful, otp sent to your email"
       };
     } catch (error) {
       if (error.code === "P2002") {
@@ -76309,7 +76309,7 @@ var AuthService = class {
         success: true,
         data: { otp },
         status: 200,
-        message: "OTP sent to your email, please check your email. Maximum 1 day to reset password"
+        message: "OTP sent to your email, please check your email."
       };
     } catch (error) {
       const status = error instanceof AppError ? error.status : 500;
